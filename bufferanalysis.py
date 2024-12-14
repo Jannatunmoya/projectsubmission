@@ -8,11 +8,11 @@ arcpy.env.overwriteOutput=True
 shape_data=arcpy.ListFeatureClasses()
 print(shape_data)
 point_data=r'E:\EDGE_208\input\buildings.shp'#point_data=shape_data[4]
-buffer_distance='200 Meters'
+buffer_distance='235 Meters'
 buffer_output=r'E:\EDGE_208\output\point buffer\point_out.shp'
 arcpy.Buffer_analysis(point_data,buffer_output,buffer_distance,dissolve_option='All')
 
-pdf_output=r'E:\EDGE_208\buffer map output\pointmap.pdf'
+pdf_output=r'E:\EDGE_208\buffer map output\pointmap_intersection.pdf'
 road=r'E:\EDGE_208\input\roads.shp'
 
 mxd_path= r'E:\EDGE_208\map\blankmap.mxd'
